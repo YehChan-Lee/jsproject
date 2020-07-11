@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <style>
+        body {
+            border: 0px solid white;
+            width: 100%;
+            background-color: #202020;
+        }
+        .all_dealer{
+            position: relative;
+            border: 0px solid orange;
+        }
+        h2 {
+            text-align: left;
+            font-size: 2em;
+            color: white;
+            padding-left: 23%;
+            /* margin-left: 10% */
+        }
+        .main_dealer {
+            border: 0px solid blue;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+        }
+        .main_dealer_picture{
+            border: 0px solid yellow;
+            height: auto;
+            width: 50%;
+            margin-left: 23%;
+            overflow: hidden;
+            background-color: #303030;
+        }
+        .main_dealer_picture>li {
+            border: 0px solid red;
+            list-style: none;
+            position: relative;
+            max-width: 100%;
+            float: left;
+            /* float: inline-end; */
+            /* padding: 0; */
+            margin: 1em;
+            color: white;
+            /* padding: 1em; */
+            text-align: left;
+            /* margin-right: 10%; */
+            font-size: 1em;
+        }
+        .main_dealer_picture>li>img {
+            height: 300px;
+        }
+        .sub_dealer {
+            border: 0px solid green;
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            /* top: 50px; */
+        }
+        .sub_list>li {
+            border: 0px solid purple;
+            list-style: none;
+            float: left;
+            width: 10%;
+            height: 10%;
+            margin-left: 4%;
+            font-size: .7em;
+        }
+        .more_dealer {
+            border: 3px solid antiquewhite;
+            font-size: 1.6em;
+            text-align: center;
+            width: 180px;
+            height: 30px;
+            padding: 0.6em;
+            padding-top: 0.3em;
+            margin-left: 43%;
+            margin-top: 2.5%;
+        }
+        .dealer_crown{
+            width: 40px;
+        }
+        .sub_list{
+            display: block;
+            list-style-type: disc;
+            /* margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px; */
+            /* padding-inline-start: 100px; */
+            margin-left: 17%;
+            color: white;
+            text-align: center;
+        }
+        .sub_list>li>img{
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 100%;
+            height: auto;
+        }
+        .dealer_word > p{
+            border: 0px solid red;
+            width: 300px;
+        }
+        .more_dealer>img {
+            width: 30px;
+            position: relative;
+            top: 5px;
+        }
+        .more_dealer>span{
+            position:relative;
+            color: white;
+            font-size: .9em;
+        }
+        .dealer_word > span {
+            font-weight: bold;
+            font-size: 1.2em;
+            border-bottom: 0px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="dealer_section">
+        <div class="all_dealer">
+            <div class="main_dealer"><!-- Main Dealer 시작 -->
+                <h2><span>이달의 딜러</span>
+                    <img src="/images/crown.png" alt="" class="dealer_crown"></h2>
+                <ul class="main_dealer_picture"><!-- Main Dealer Picture 시작-->
+                    <li>
+                        <img src="./images/김지원.jpg" alt="" max-width="100%">
+                    </li>
+                    <li>
+                        이름: 박정석<br>
+                        평점: 0/5<br>
+                        경력: 00년<br>
+                        최근거래: PORCHE 911 SPIDER<br>
+                        선정이유: #착한가격 #친절 #구매자<br>
+                        #판매자 #모두만족 #의사소통 #거래실적多
+                    </li>
+                    <li class="dealer_word"><span>딜러의 한마디</span><br>
+                        <p>
+                            죠 : 죠스바<br>
+                            스 : 스윽 꺼내보니<br>
+                            바 : 바밤바
+                        </p>
+                    </li>
+                </ul><!-- Main Dealer Pricture 종료-->
+            </div><!-- Main Dealer 종료 -->
+
+            <div class="sub_dealer"><!-- Sub Dealer 시작-->
+                <ul class="sub_list"><!-- sub_list 시작-->
+                    <li>
+                        <img src="./images/조이현.jpg" alt="" class="sub_d1"
+                        onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
+                        <p>이름: 안승우<br>
+                        평점: 0/5</p>
+                    </li>
+                    <li>
+                        <img src="./images/아이유.jpg" alt="" class="sub_d2"
+                        onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
+                        <p>이름: 전재승<br>
+                        평점: 0/5</p>
+                    </li>
+                    <li>
+                        <img src="./images/아이유2.jpg" alt="" class="sub_d3"
+                        onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
+                        <p>이름: 최희만<br>
+                        평점: 0/5</p>
+                    </li>
+                    <li>
+                        <img src="./images/아이유.jpg" alt="" class="sub_d4"
+                        onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
+                        <p>이름: 이준영<br>
+                        평점: 0/5</p>
+                    </li>
+                    <li>
+                        <img src="./images/아이유.jpg" alt="" class="sub_d5"
+                        onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
+                        <p>이름: 이예찬<br>
+                        평점: 0/5</p>
+                    </li>
+                </ul><!-- sub_list 종료-->
+            </div><!-- Sub Dealer 종료-->
+        </div><!--all_dealer 종료-->
+            <div class="more_dealer" onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer"><!-- 더보기 시작-->
+                    <span>딜러 더보기</span>
+                    <img src="./images/arrow2.png" alt="" class="more_Dbtn">
+            </div><!-- 더보기 종료-->
+    </section>
+</body>
+</html>
