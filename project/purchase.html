@@ -1,70 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="../extendJS/jquery-3.5.1.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        html{
-            width: 1800px;
-            background:-webkit-gradient(linear, 56% 87%, 57% 11%, from(#E1FFFF), to(#FFFFFF));
-        }
-        body {
-            user-select: none;
-            margin-left: 200px;
-        }
-        hr{
-            width: 100%;
-        }
-        #main{
-            width: 1700px;
-            overflow: hidden;
-        }
-        #list {
-            border: 1px solid gray;
-            width: 180px;
-            float: left;
-            margin-top: 35px;
-        }
-
-        ul {
-            margin: 0;
-            padding: 10px;
-            border-bottom: 0.5px solid gray;
-            width: 160px;
-        }
-
-        li {
-            list-style: none;
-            display: none;
-        }
-
-        #end {
-            border: none;
-        }
-
-        #end>li {
-            display: inline;
-        }
-
-        b {
-            display: block;
-            cursor: pointer;
-            padding-bottom: 10px;
-        }
-        b:hover {
-            text-decoration: underline
-        }
-        iframe{
-            float: left;
-        }
-        /* #banner{
-            position: relative;
-            float: left;
-        } */
-    </style>
+    <link rel="stylesheet" sype="text/css" href = "style/purchase_style.css">
     <script>
         $(document).ready(function () {
             $("b").click(function () {
@@ -76,8 +18,7 @@
                     $(this).closest("ul").children("li").show();
                     this.click = 1;
                 }
-
-            })
+            });
         });
     </script>
 </head>
