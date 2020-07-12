@@ -375,3 +375,78 @@ img {
 }
 
 /* 인기 차량 끝 */
+/* 메인 뉴스 시작 */
+.news_section{
+    border: 0px solid red;
+    width: 100%;
+}
+.news_Alldiv>h2{
+    color: white;
+    text-align: center;
+}
+.news_list{
+    font-size: .8em;
+    margin: 0;
+    padding-left: 5%;
+}
+.news_des{
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 3%;
+    font-size: 1.3em;
+}
+a{
+    cursor: pointer;
+    text-decoration:none;
+    color: white;
+}
+.news_img{
+     width: 2%;
+}
+.news_ul{
+    border: 0px solid blue;
+    overflow: hidden;
+    padding-left: 15%;
+}
+.news_ul>li{
+    border: 1px solid rgb(59, 59, 59);
+    list-style: none;
+    position: relative;
+    float: left;
+    width: 40%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: .5%;
+    /* box-shadow: .1px .1px .1px gray; */
+}
+.news_ul img{
+    margin: 0;
+}
+.news_photo >img{
+    width: 25%;
+    height: 40%;
+    float: right;
+    border-radius: 5px;
+    margin-bottom: 6%;
+    margin-right: 6%;
+    margin-left: 6%;
+}
+.news_more{
+    border: 1px solid white;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    margin-left: 43%;
+    padding: .5em;
+}
+.news_moreimg{
+    width: 10%;
+    height: 10%;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: -5px;
+}
+/* 메인 뉴스 끝 */
