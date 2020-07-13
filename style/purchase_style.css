@@ -1,6 +1,6 @@
 html{
     width: 1800px;
-    background:-webkit-gradient(linear, 56% 87%, 57% 11%, from(#E1FFFF), to(#FFFFFF));
+    background:white
 }
 body {
     user-select: none;
