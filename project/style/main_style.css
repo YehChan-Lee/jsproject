@@ -10,62 +10,6 @@ body {
 }
 
 #site_total {padding: 0;}
-/*  gnb 패널 시작 */
-#gnb_Panel {
-    background-color: #131A37;
-    position: relative;
-    border-bottom: 1px solid lightgray;
-    width: 100%;
-    height: 90px;
-    padding: 0;
-    margin-top: 15px;
-    margin: 0;
-    display: inline-block;
-}
-
-#category {
-    list-style: none;
-    width: 700px;
-    margin: 10px 10px 0 10px;
-    position: absolute;
-    height: 60px;
-    left: 1100px;
-    padding: 5px;
-}
-
-#category li>a {
-    color: white;
-    text-decoration: none;
-}
-
-#category li {
-    background-color: #131A37;
-    color: white;
-    float: left;
-    margin: 5px 20px 0px 0;
-    width: 150px;
-    height: 70px;
-    line-height: 55px;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 18pt;
-    text-decoration: none;
-}
-
-#logo {
-    position: absolute;
-    /* border: 1px solid red; */
-    /* float: left; */
-    width: 200px;
-    height: 60px;
-    margin: 10px 0;
-    line-height: 60px;
-    font-size: 34pt;
-    color: white;
-    left: 30px;
-    text-align: center;
-}
-/* gnb패널 끝 */
 /* 베너 시작 */
 .maindiv {
     position: relative;
@@ -319,18 +263,33 @@ img {
 #hotCar{
     background-color: #0f1429;
 }
-#hotTitle{
+#hotTitle1{
     text-align: center;
     color: white;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 40px;
 }
-#hotTitle img{
-    width: 20px;
-    height: 30px;
-    margin: 0;
-    margin-top: 10px;
+#hotTitle1 > span{
+    margin-left: 245px;
+}
+#hotTitle1 img{
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 0 0 0 30px;
+    top: 50px;
+}
+#hotTitle2{
+    text-align: center;
+    color: gray;
+    margin-bottom: 40px;
+    padding-right: 5px;
+    font-size: 20px;
 }
 #carList{
     text-align: center;
+    margin-bottom: 40px;
 }
 #carList > ul{
     display:inline-block;
@@ -368,6 +327,7 @@ img {
     border-radius: 5px;
     color: white;
     padding-top: 15px;
+    margin-bottom: 60px;
 }
 #more > a{
     text-decoration: none;
@@ -452,13 +412,3 @@ a{
     margin-top: -5px;
 }
 /* 메인 뉴스 끝 */
-
-/* footer 시작 */
-footer{
-    border-top: 1px solid lightgray;
-    width: 100%;
-    height: 120px;
-    margin: 0;
-    margin-top: 20px;
-}
-/* footer 끝 */

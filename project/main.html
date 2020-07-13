@@ -7,56 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" sype="text/css" href = "style/main_style.css">
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#category li').hover(function () {
-                $(this).css('borderBottom', '2px solid white');
-            }, function () {
-                $(this).css('borderBottom', '');
-            });
-
-            var $banner = $(".banner").find("ul");
-            var $bannerWidth = $banner.children().outerWidth();
-            var $bannerHeight = $banner.children().outerHeight();
-            var $bannerLength = $banner.children().length;
-            var $length = $banner.length;
-            var rollingId;
-            rollingId = setInterval(function () { rollingStart(); }, 3000);
-
-            function rollingStart() {
-
-                if ($bannerLength == 1) {
-                    clearInterval(rollingId);
-                    $(this).css("cursor", "pointer");
-                } else {
-                    $banner.css("width", $bannerWidth * $length + "px");
-                    $banner.css("height", $bannerHeight + "px");
-                    $banner.animate({ left: - $bannerWidth + "px" }, 1500, function () {
-                        $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-                        $(this).find("li:first").remove();
-                        $(this).css("left", 0);
-                    });
-                }
-            }
-        });
-    </script>
 </head>
 
 <body>
     <div id="site_total">
         <header>
-            <!--상단 gnb패널 시작-->
-            <div id="gnb_Panel">
-                <h2 id="logo">LOGO</h2>
-                <ul id="category">
-                    <li id="category1" value="category1"><a href="purchase.html" target="_parent">자동차 구매</a></li>
-                    <li id="category2" value="category2"><a href="category2.html" target="_parent">카테고리2</a></li>
-                    <li id="category3" value="category3"><a href="category3.html" target="_parent">카테고리3</a></li>
-                    <li id="category4" value="category4"><a href="category4.html" target="_parent">카테고리4</a></li>
-                </ul>
-            </div>
-            <!--상단 gnb패널 끝-->
-
             <!-- 배너 시작 -->
             <div class="maindiv">
                 <div class="banner">
@@ -74,7 +29,6 @@
                 </div>
             </div>
             <!-- 배너 끝 -->
-
             <!--신용 딜러 부분 시작-->
             <div class="subdealerdiv">
                 <div class="subdiv">
@@ -87,7 +41,6 @@
             </div>
             <!--신용 딜러 부분 끝-->
         </header>
-        
         <!-- 딜러 section 시작 -->
         <section class="dealer_section">
             <div class="all_dealer">
@@ -159,8 +112,8 @@
         <!-- 딜러 section 끝 -->
         <!-- 인기 차량 시작 -->
         <section id="hotCar"> 
-            <br><br><br><br>
-            <h1 id="hotTitle">인기차종 <img src="images/fire.png"></h1>
+            <br>
+            <h1 id="hotTitle1"><span>인기차종</span> <img src="images/fire2.png"><br><h1 id="hotTitle2">요새 제일 잘나가는 차량이 궁금하다면?</h1></h1>
             
             <div id="carList">
                 <ul>
@@ -194,7 +147,6 @@
             <div id="more"><a href="purchase.html"><h3>차량 더보기 ></h3></a></div>            
         </section>
         <!-- 인기 차량 끝 -->
-
         <!-- 기사 시작 -->
         <section class="news_section">
             <div class="news_Alldiv"><!--기사 div -->
@@ -271,8 +223,5 @@
 
     </div>
 </body>
-<footer>
-    
 
-</footer>
 </html>
