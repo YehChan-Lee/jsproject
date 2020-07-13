@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" sype="text/css" href="style/board_style.css">
+    <!-- <link rel="stylesheet" sype="text/css" href = "style/main_style.css"> -->
+    <!--
+    <link rel/="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./js/underscore.js"></script>
+
+</head>
+
+<body id="board_body">
+    <div id="site_total">
+        <h1>게시판</h1>
+        <!--게시판 헤더-->
+        <header>
+            <div class="board_up">
+                <div class="board_h1">
+                    <h1>1조에서<br><span class="bospan">전해드리는 소식</span>을<br>놓치지 마세요.</h1>
+                </div>
+                <div>
+                    <img src="images/megaphone5.png" class="board_img">
+                </div>
+            </div>
+        </header>
+        <!--게시판 헤더 끝-->
+        <!--구분-->
+        <section>
+        <div class="select_title">
+            <span class="titlebox">구분</span>
+            <select name="select" id="select" style="width:100px">
+                <option value="title">제목</option>
+                <option value="contents">내용</option>
+                <option value="subcon">제목+내용</option>
+            </select>
+            <span>
+                <input type="text" title="검색어" class="search" placeholder="검색어를 입력하세요.">
+            </span>
+            <button type="button" style="width:50px; height:30px" name="조회" class="searchbtn">조회</button>
+        </div>
+        <!--구분 끝-->
+        <script>
+        // 구분 기능
+        </script>
+        <div class="board_cnt">
+            총 <strong style="color: rgb(0, 101, 163)"><span id="boardli"></span></strong> 건의 글이 있습니다.
+        </div>
+        <div id="board"></div>
+        <script id="boardPage" type="text/template">
+            <table border="1px" class="boardtable">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody class="board_tbody">
+                    <%
+                    for(var i=0; i<boardList.length; i++){
+                        var board_list = boardList[i];
+                    %>
+                    <tr>
+                        <td class="no"><%=board_list.NO%></td>
+                        <td class="title"><%=board_list.제목%></td>
+                        <td class="author"><%=board_list.작성자%></td>
+                        <td class="date"><%=board_list.작성일%></td>
+                        <td class="view"><%=board_list.조회수%></td>
+                    </tr>
+                    <%
+                    };
+                    %>
+                </tbody>
+            </table>
+        </script>
+        <script>
+            var boardList = [
+              {NO:1, 제목:"1", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:2, 제목:"2", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+              {NO:3, 제목:"3", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:4, 제목:"4", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+              {NO:5, 제목:"5", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:6, 제목:"6", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+              {NO:7, 제목:"7", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:8, 제목:"8", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+              {NO:9, 제목:"9", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:10, 제목:"10", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+              {NO:11, 제목:"11", 작성자:"seoul",작성일:"2020.07.13", 조회수:11},
+              {NO:12, 제목:"12", 작성자:"busan",작성일:"2020.07.13", 조회수:11},
+            ];
+    
+            $(document).ready(function(){
+                var compiled = _.template($('#boardPage').html());
+                $('#board').html(compiled({boardList:boardList}));
+                $("#boardli").html(boardList.length);
+            });
+        </script>
+    </div>
+    <!--페이지네이션 시작-->
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+      </div>
+      <!--페이지네이션 종료-->
+    <!-- <div class="page">
+        <a class="prev">
+            <img src="./images/back.png" alt="prev" class="prevbtn">
+            <span class="blind">이전</span>
+        </a>
+        <strong>
+            <span>1</span>
+        </strong>
+        <a nextpage="2">2</a>
+        <a nextpage="3">3</a>
+        <a nextpage="4">4</a>
+        <a nextpage="5">5</a>
+        <a class="next" nextpage="2">
+            <img src="./images/back.png" alt="prev" class="prevbtn" style="transform: rotate(180deg);">
+            <span class="blind">이후</span>
+        </a>
+    </div> -->
+    <script>
+        $(document).ready(function(){
+            $(".pagination>a").click(function(){
+                $(".pagination>active").hide();
+                $(".pagination>a",this).show("fast");
+            });
+        });
+    </script>
+</section>
+</body>
+</html>

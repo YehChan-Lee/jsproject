@@ -3,13 +3,14 @@ html {
     margin: 0;
     background-color: #131A37;
 }
-
 body {
     height: 100%;
     margin: 0;
 }
 
-#site_total {padding: 0;}
+#site_total {
+    padding: 0;
+}
 /* 베너 시작 */
 .maindiv {
     position: relative;
@@ -315,8 +316,8 @@ img {
     color: skyblue;
 }
 #more{
-    width: 100%;
-    text-align: center;
+    width: 240px;
+    margin: 10px 818px;
 }
 #more > a> h3{
     display: inline-block;
@@ -344,6 +345,10 @@ img {
     color: white;
     text-align: center;
 }
+/* .news_Alldiv{
+    margin-top: 20px;
+    margin-bottom: 100px;
+} */
 .news_list{
     font-size: .8em;
     margin: 0;
@@ -403,6 +408,7 @@ a{
     font-size: 1.2em;
     margin-left: 43%;
     padding: .5em;
+        
 }
 .news_moreimg{
     width: 10%;
@@ -412,3 +418,80 @@ a{
     margin-top: -5px;
 }
 /* 메인 뉴스 끝 */
+/* 퀵메뉴 시작 */
+#quick_buy {
+    background-color: c8c8c8;
+    position: fixed;
+    width: 70px;
+    display: inline-block;
+    color: black;
+    height: 30px;
+    right: 53px;
+    top: 63%;
+    z-index: 50;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    font-weight: bold;
+}
+
+#quick_bullet {
+    background-color: c8c8c8;
+    position: fixed;
+    width: 70px;
+    display: inline-block;
+    color: black;
+    height: 23px;
+    right: 54px;
+    top: 66%;
+    z-index: 50;
+    text-align: center;
+    border-bottom: 1px dotted black;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#quick_sell {
+    background-color: #c8c8c8;
+    border-bottom: 1px dotted black;
+    position: fixed;
+    width: 78px;
+    display: inline-block;
+    color: black;
+    height: 34px;
+    right: 49px;
+    top: 68.6%;
+    z-index: 50;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#quick_base {
+    width: 80px;
+    height: 160px;
+    position:fixed;
+    display: inline-block;
+    right:38px;
+    top: 50%;
+    z-index: 50;
+}
+
+/* 퀵메뉴 종료 */
+
+/* 탑메뉴로 돌아가기 시작*/
+#ToTheTop {
+    margin: 0;
+    padding: 0px;
+    width: 54px;
+    height: 54px;
+    position:fixed;
+    display: inline-block;
+    right:60px;
+    top: 57%;
+    z-index: 51;    
+}
+/*탑메뉴로 돌아가기 끝*/
