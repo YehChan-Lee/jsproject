@@ -368,14 +368,14 @@ a{
 #news_ul{
     border: 0px solid blue;
     overflow: hidden;
-    padding-left: 16%;
+    padding-left: 20%;
 }
 #news_ul>li{
     border: 1px solid rgb(59, 59, 59);
     list-style: none;
     position: relative;
     float: left;
-    width: 40%;
+    width: 38%;
     box-sizing: border-box;
     border-radius: 5px;
     margin: .5%;
