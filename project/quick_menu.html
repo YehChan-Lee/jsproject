@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #quick_menu {
+            position: fixed;
+            display: inline-block;
+            width: 60px;
+            z-index: 50;
+            top: 70%;
+            right: 40px;
+            padding: 5px;
+        }
+        #quick_buy {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            box-shadow: 2px 2px 2px black;
+            transition: .2s;
+            left: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #quick_sell {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            box-shadow: 2px 2px 2px black;
+            transition: .2s;
+            left: 0;
+            position: relative;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        #quick_bullet {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            box-shadow: 2px 2px 2px black;
+            transition: .2s;
+            left: 0;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        #ToTheTop {
+            width: 50px;
+            height: 50px;
+        }
+        #carIcon {
+            position: relative;
+            /* left: 5px; */
+            top: 5px;
+            margin-left:5px;
+        }
+        #sellIcon {
+            position: relative;
+            /* left: 5px; */
+            top : 5px;
+            margin-left:5px;
+        }
+        #bulletInIcon {
+            position: relative;
+            /* left: 9px; */
+            top: 5px;
+            margin-left:9px;
+        }
+        #buyWord, #sellWord {
+            position: relative;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            left: 15px;
+            top: -10px;
+        }
+        #bulletInWord {
+            position: relative;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            left: 10px;
+            top: -5px;
+        }
+        A:link {color:black; text-decoration: none;}
+        A:visited {color: #4c4c4c; text-decoration: none;}
+        A:hover{color: black; text-decoration: none;}
+    </style>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#quick_buy').on('mouseover', function() {
+                $('#quick_buy').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'border-radius': '50px',
+                    'padding-left': '5px'
+                })
+                $('#buyWord').html("구매");
+            })
+            $('#quick_buy').on('mouseout', function(){
+                $('#quick_buy').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#buyWord').html("");
+            })
+            $('#quick_sell').on('mouseover', function() {
+                $('#quick_sell').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'padding-left': '5px',
+                    'border-radius': '50px'
+                })
+                $('#sellWord').html("판매");
+            })
+            $('#quick_sell').on('mouseout', function(){
+                $('#quick_sell').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#sellWord').html("");
+            })
+            $('#quick_bullet').on('mouseover', function() {
+                $('#quick_bullet').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'padding-left': '5px',
+                    'border-radius': '50px'
+                })
+                $('#bulletInWord').html("게시판");
+            })
+            $('#quick_bullet').on('mouseout', function(){
+                $('#quick_bullet').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#bulletInWord').html("");
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div id="quick_menu">
+
+        <a href="purchase.html">
+            <div id="quick_buy">
+                <img id="carIcon" src="images/carIcon.png" width="40" height="40">
+                <span id="buyWord"></span>
+            </div>
+        </a>
+
+        <a href="category2.html">
+            <div id="quick_sell">
+                <img id="sellIcon" src="images/shakeHands.png" alt="sell" width="40" height="40">
+                <span id="sellWord"></span>
+            </div>
+        </a>
+
+        <a href="category3.html">
+            <div id="quick_bullet">
+                <img id="bulletInIcon" src="images/bulletin.png" alt="bulletin" width="35" height="35">
+                <span id="bulletInWord"></span>
+            </div>
+        </a>
+
+        <a href="#gnb_Panel">
+            <img src="images/ToTheTop.png" alt="ToTheTop" id="ToTheTop">
+        </a>
+
+    </div>
+</body>
+</html>
