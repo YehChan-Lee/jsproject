@@ -130,11 +130,10 @@ footer{
 }
 .footer_sns>li img{ /*SNS 이미지*/
     /* border: 1px solid blue; */
-    display: inline;
+    display: inline-block;
     margin-top: 0;
     width: 30px;
     height: 30px;
-
 }
 .footer_info { /*로고 및 주소*/
     float: left;

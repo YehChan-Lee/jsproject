@@ -38,18 +38,37 @@
                     });
                 }
             }
+            $(window).resize(function(){
+                resizeApply();
+            });
         });
+
+        function resizeApply() {
+            var minWidth = 1920;
+            var minheight = 937;
+            zoomx = window.innerWidth / minWidth;
+            zoomy = window.innerHeight / minheight;
+            width = 100 / zoomx;
+            height = 100 / zoomy;
+            document.body.style.transformOrigin = "left top";
+            document.body.style.transform = "scale(" + zoomx + ")";
+            document.body.style.width = width + "%";
+            document.body.style.height = height + "%";
+            console.log("h:"+document.body.style.height);
+            console.log("x"+document.body.style.width);
+            }
     </script>
 
-<script type="text/javascript"> 
-    function calcHeight(){
-        var ifr = document.getElementById('main_iframe');
-        var ifrw = (ifr.contentWindow || ifr.contentDocument);
-        $('#main_iframe').height(ifrw.document.body.scrollHeight);
-     ifr.style.overflow = "hidden";
-    }
+    <script type="text/javascript">
+        function calcHeight() {
+            var ifr = document.getElementById('main_iframe');
+            var ifrw = (ifr.contentWindow || ifr.contentDocument);
+            $('#main_iframe').height(ifrw.document.body.scrollHeight);
+            ifr.style.overflow = "hidden";
+        }
     </script>
 </head>
+
 <body>
     <div id="site_total">
         <!--상단 gnb패널 시작-->
@@ -64,48 +83,53 @@
         </div>
         <!--상단 gnb패널 끝-->
     </div>
-    <iframe src="main.html" id="main_iframe" onload="calcHeight();"
-     name="main_iframe" title="main_iframe" frameborder="0" scrolling="no"
-      style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
+    <iframe src="main.html" id="main_iframe" onload="calcHeight();" name="main_iframe" title="main_iframe"
+        frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
     </iframe>
     <!--퀵메뉴 시작 -->
-        <aside class="quick_menu">
+    <aside class="quick_menu">
 
-            <div>
-                <img src="images/quick_base.png" alt="" id="quick_base">
-                <a href="#gnb_Panel">
-                    <img src="images/ToTheTop.png" alt="" id="ToTheTop">
-                </a>
-                <a href="index.html" target="_parent">
-                    <div id="quick_buy">메인 화면</div>
-                </a>
-                <a href="board.html" target="main_iframe">
-                    <div id="quick_bullet">게시판</div>
-                </a>
-                <a href="Sales.html" target="main_iframe">
-                    <div id="quick_sell"> 판 매 </div>
-                </a>
-            </div>
+        <div>
+            <img src="images/quick_base.png" alt="" id="quick_base">
+            <a href="#gnb_Panel">
+                <img src="images/ToTheTop.png" alt="" id="ToTheTop">
+            </a>
+            <a href="index.html" target="_parent">
+                <div id="quick_buy">메인 화면</div>
+            </a>
+            <a href="board.html" target="main_iframe">
+                <div id="quick_bullet">게시판</div>
+            </a>
+            <a href="Sales.html" target="main_iframe">
+                <div id="quick_sell"> 판 매 </div>
+            </a>
+        </div>
 
-        </aside>
+    </aside>
 
-    <footer><!--하단 footer 시작-->
-        <div class="footer_contents"><!--하반 footer 전체-->
-            <nav class="footer_nav"><!--약관 및 SNS-->
+    <footer>
+        <!--하단 footer 시작-->
+        <div class="footer_contents">
+            <!--하반 footer 전체-->
+            <nav class="footer_nav">
+                <!--약관 및 SNS-->
                 <ul class="footer_menu">
                     <li><a href="">이용약관</a></li>
                     <li><a href="">개인정보취급방침</a></li>
                     <li><a href="">제휴 문의</a></li>
                 </ul>
                 <ul class="footer_sns">
-                    <li><a href="https://www.instagram.com/?hl=ko"><img src="images/인스타.png" alt="" ></a></li>
+                    <li><a href="https://www.instagram.com/?hl=ko"><img src="images/인스타.png" alt=""></a></li>
                     <li><a href="https://ko-kr.facebook.com/"><img src="images/페이스북.png" alt=""></a></li>
                     <li><a href="https://www.youtube.com/premium"><img src="images/유튜브.png" alt=""></a></li>
-                    <li><a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0"><img src="images/블로그.png" alt=""></a></li>
-                    <li><a href="https://www.kakaocorp.com/service/KakaoTalk?lang=ko"><img src="images/카카오톡.png" alt=""></a></li>
+                    <li><a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0"><img
+                                src="images/블로그.png" alt=""></a></li>
+                    <li><a href="https://www.kakaocorp.com/service/KakaoTalk?lang=ko"><img src="images/카카오톡.png"
+                                alt=""></a></li>
                 </ul>
             </nav>
-            <div class="footer_info"><!--로고 및 주소-->
+            <div class="footer_info">
+                <!--로고 및 주소-->
                 <h3>로고</h3>
                 <p>Copyright © Team_1</p>
                 <div class="footer_adress">
@@ -117,7 +141,6 @@
             </div>
         </div>
     </footer>
-    
 </body>
 
 </html>
