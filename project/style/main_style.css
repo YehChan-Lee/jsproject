@@ -476,17 +476,3 @@ a{
 }
 
 /* 퀵메뉴 종료 */
-
-/* 탑메뉴로 돌아가기 시작*/
-#ToTheTop {
-    margin: 0;
-    padding: 0px;
-    width: 54px;
-    height: 54px;
-    position:fixed;
-    display: inline-block;
-    right:60px;
-    top: 57%;
-    z-index: 51;    
-}
-/*탑메뉴로 돌아가기 끝*/

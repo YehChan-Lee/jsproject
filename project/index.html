@@ -49,6 +49,73 @@
      ifr.style.overflow = "hidden";
     }
     </script>
+
+    <!-- 퀵메뉴 스크립트 시작 -->
+    <script>
+        $(document).ready(function(){
+            $('#quick_buy').on('mouseover', function() {
+                $('#quick_buy').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'border-radius': '50px',
+                    'padding-left': '5px'
+                })
+                $('#buyWord').html("구매");
+            })
+            $('#quick_buy').on('mouseout', function(){
+                $('#quick_buy').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#buyWord').html("");
+            })
+            $('#quick_sell').on('mouseover', function() {
+                $('#quick_sell').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'padding-left': '5px',
+                    'border-radius': '50px'
+                })
+                $('#sellWord').html("판매");
+            })
+            $('#quick_sell').on('mouseout', function(){
+                $('#quick_sell').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#sellWord').html("");
+            })
+            $('#quick_bullet').on('mouseover', function() {
+                $('#quick_bullet').css({
+                    'left':'-80px',
+                    'width': '130px',
+                    'height': '50px',
+                    'padding-left': '5px',
+                    'border-radius': '50px'
+                })
+                $('#bulletInWord').html("게시판");
+            })
+            $('#quick_bullet').on('mouseout', function(){
+                $('#quick_bullet').css({
+                    'left':'0px',
+                    'width': '50px',
+                    'height': '50px',
+                    'padding-left': '0px',
+                    'border-radius': '50px'
+                })
+                $('#bulletInWord').html("");
+            })
+        });
+    </script>
+    <!-- 퀵메뉴 스크립트 종료 -->
 </head>
 
 <body>
@@ -65,30 +132,42 @@
         </div>
         <!--상단 gnb패널 끝-->
     </div>
+
+        <!--퀵메뉴 시작 -->
+        <div id="quick_menu">
+    
+            <a href="purchase.html" target="main_iframe">
+                <div id="quick_buy">
+                    <img id="carIcon" src="images/carIcon.png" width="40" height="40">
+                    <span id="buyWord"></span>
+                </div>
+            </a>
+    
+            <a href="Sales.html" target="main_iframe">
+                <div id="quick_sell">
+                    <img id="sellIcon" src="images/shakeHands.png" alt="sell" width="40" height="40">
+                    <span id="sellWord"></span>
+                </div>
+            </a>
+    
+            <a href="board.html" target="main_iframe">
+                <div id="quick_bullet">
+                    <img id="bulletInIcon" src="images/bulletin.png" alt="bulletin" width="35" height="35">
+                    <span id="bulletInWord"></span>
+                </div>
+            </a>
+    
+            <a href="#gnb_Panel">
+                <img src="images/ToTheTop.png" alt="ToTheTop" id="ToTheTop">
+            </a>
+    
+        </div>
+        <!-- 퀵메뉴 종료 -->
+
     <iframe src="main.html" id="main_iframe" onload="calcHeight();"
      name="main_iframe" title="main_iframe" frameborder="0" scrolling="no"
       style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; max-height: 3500px;">
     </iframe>
-    <!--퀵메뉴 시작 -->
-        <aside class="quick_menu">
-
-            <div>
-                <img src="images/quick_base.png" alt="" id="quick_base">
-                <a href="#gnb_Panel">
-                    <img src="images/ToTheTop.png" alt="" id="ToTheTop">
-                </a>
-                <a href="index.html" target="_parent">
-                    <div id="quick_buy">메인 화면</div>
-                </a>
-                <a href="board.html" target="main_iframe">
-                    <div id="quick_bullet">게시판</div>
-                </a>
-                <a href="Sales.html" target="main_iframe">
-                    <div id="quick_sell"> 판 매 </div>
-                </a>
-            </div>
-
-        </aside>
 
     <footer><!--하단 footer 시작-->
         <div class="footer_contents"><!--하반 footer 전체-->
