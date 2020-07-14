@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html{
+            user-select: none;
+        }
         .carDetail {
             text-align: center;
         }
@@ -70,17 +73,19 @@
         #deatilSubImg img:hover{
             border: 1px solid red;
         }
+
+        #clickOn > img{
+            border: 2px solid red;
+        }
     </style>
     <script>
         window.onload = function(){
             let img = document.getElementById("deatilSubImg").getElementsByTagName("img");
-            let thisPre=0;
+            let thisPre = img[0];
             for(let i=0;i<img.length;i++){
                 img[i].onclick = function(){
-                    if(thisPre !=0 ){
-                        thisPre.style.border = "2px solid white";
-                    }
-                    this.style.border = "2px solid red";
+                    thisPre.closest("td").id = "";
+                    this.closest("td").id = "clickOn";
                     thisPre = this;
                 }
             }
@@ -129,7 +134,7 @@
         <li>
             <table id="deatilSubImg">
                 <tr>
-                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td id="clickOn"><img src="images/purchase/car1.jpg" alt=""></td>
                     <td><img src="images/purchase/car1.jpg" alt=""></td>
                     <td><img src="images/purchase/car1.jpg" alt=""></td>
                 </tr>
