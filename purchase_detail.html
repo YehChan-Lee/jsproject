@@ -64,8 +64,28 @@
             margin-right: 5px;
             width: 120px;
             height: 93px;
+            border: 2px solid white;
+        }
+
+        #deatilSubImg img:hover{
+            border: 1px solid red;
         }
     </style>
+    <script>
+        window.onload = function(){
+            let img = document.getElementById("deatilSubImg").getElementsByTagName("img");
+            let thisPre=0;
+            for(let i=0;i<img.length;i++){
+                img[i].onclick = function(){
+                    if(thisPre !=0 ){
+                        thisPre.style.border = "2px solid white";
+                    }
+                    this.style.border = "2px solid red";
+                    thisPre = this;
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
