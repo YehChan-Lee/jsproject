@@ -38,39 +38,36 @@
                     });
                 }
             }
+            quickMenuScr();
+
             $(window).resize(function(){
                 resizeApply();
+                quickMenuScr();
             });
         });
 
         function resizeApply() {
             var minWidth = 1920;
-            var minheight = 937;
-            zoomx = window.innerWidth / minWidth;
-            zoomy = window.innerHeight / minheight;
-            width = 100 / zoomx;
-            height = 100 / zoomy;
+            zoom = window.innerWidth / minWidth;
+            width = 100 / zoom;
             document.body.style.transformOrigin = "left top";
-            document.body.style.transform = "scale(" + zoomx + ")";
+            document.body.style.transform = "scale(" + zoom + ")";
             document.body.style.width = width + "%";
-            document.body.style.height = height + "%";
-            console.log("h:"+document.body.style.height);
-            console.log("x"+document.body.style.width);
+            document.body.addEventListener("transitionend", function(){
+            document.body.style.transform = '';
+            }, false);
+            console.log(window.innerHeight);
             }
-    </script>
 
-    <script type="text/javascript">
-        function calcHeight() {
+            function calcHeight() {
             var ifr = document.getElementById('main_iframe');
             var ifrw = (ifr.contentWindow || ifr.contentDocument);
             $('#main_iframe').height(ifrw.document.body.scrollHeight);
             ifr.style.overflow = "hidden";
         }
-    </script>
 
-    <!-- 퀵메뉴 스크립트 시작 -->
-    <script>
-        $(document).ready(function(){
+        // 퀵메뉴 스크립트 시작
+        function quickMenuScr(){
             $('#quick_buy').on('mouseover', function() {
                 $('#quick_buy').css({
                     'left':'-80px',
@@ -131,9 +128,10 @@
                 })
                 $('#bulletInWord').html("");
             })
-        });
+            }
+            // 퀵메뉴 스크립트 종료
+
     </script>
-    <!-- 퀵메뉴 스크립트 종료 -->
 </head>
 
 <body>
@@ -153,27 +151,6 @@
     <iframe src="main.html" id="main_iframe" onload="calcHeight();" name="main_iframe" title="main_iframe"
         frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
     </iframe>
-    <!--퀵메뉴 시작 -->
-    <aside class="quick_menu">
-
-        <div>
-            <img src="images/quick_base.png" alt="" id="quick_base">
-            <a href="#gnb_Panel">
-                <img src="images/ToTheTop.png" alt="" id="ToTheTop">
-            </a>
-            <a href="index.html" target="_parent">
-                <div id="quick_buy">메인 화면</div>
-            </a>
-            <a href="board.html" target="main_iframe">
-                <div id="quick_bullet">게시판</div>
-            </a>
-            <a href="Sales.html" target="main_iframe">
-                <div id="quick_sell"> 판 매 </div>
-            </a>
-        </div>
-
-    </aside>
-
         <!--퀵메뉴 시작 -->
         <div id="quick_menu">
     
@@ -204,11 +181,6 @@
     
         </div>
         <!-- 퀵메뉴 종료 -->
-
-    <iframe src="main.html" id="main_iframe" onload="calcHeight();"
-     name="main_iframe" title="main_iframe" frameborder="0" scrolling="no"
-      style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
-    </iframe>
 
     <footer>
         <!--하단 footer 시작-->
