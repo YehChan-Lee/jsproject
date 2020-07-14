@@ -205,13 +205,10 @@ img {
 }
 #more_dealer {
     text-align: center;
-    width: 180px;
-    height: 30px;
-    padding: 0.6em;
+    width: 232px;
+    height: 60px;
     padding-top: 0.3em;
-    margin-left: 43%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin:25px 835px;
 }
 #sub_list{
     display: block;
@@ -237,10 +234,10 @@ img {
     width: 300px;
     padding: 0;
 }
-#more_dealer{
+/* #more_dealer{
     width: 240px;
     margin: 10px 818px;
-}
+} */
 #more_dealer > a> h3{
     display: inline-block;
     text-align: center;
@@ -250,7 +247,8 @@ img {
     border-radius: 5px;
     color: black;
     padding-top: 15px;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+    margin: 0;
 }
 #more_dealer > a{
     text-decoration: none;
@@ -269,7 +267,7 @@ img {
     font-size: 40px;
 }
 #hotTitle1 > span{
-    margin-left: 245px;
+    margin-left: 220px;
 }
 #hotTitle1 img{
     position: relative;
@@ -291,6 +289,7 @@ img {
 }
 #carList > ul{
     display:inline-block;
+    padding: 0;
 }
 #carList .carImg{
     list-style: none;
@@ -314,7 +313,7 @@ img {
 }
 #more{
     width: 240px;
-    margin: 10px 818px;
+    margin: 10px 835px;
 }
 #more > a> h3{
     display: inline-block;
@@ -369,14 +368,15 @@ a{
 #news_ul{
     border: 0px solid blue;
     overflow: hidden;
-    padding-left: 20%;
+    padding-left: 16%;
+    padding-right: 16%;
 }
 #news_ul>li{
     border: 1px solid rgb(59, 59, 59);
     list-style: none;
     position: relative;
     float: left;
-    width: 38%;
+    width: 49%;
     box-sizing: border-box;
     border-radius: 5px;
     margin: .5%;
@@ -395,8 +395,8 @@ a{
     margin-left: 6%;
 }
 #news_more{
-    width: 240px;
-    margin: 30px 818px;
+    width: 232px;
+    margin: 30px 835px;
 }
 #news_more > a> h3{
     display: inline-block;
