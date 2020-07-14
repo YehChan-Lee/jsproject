@@ -1,0 +1,138 @@
+#board_body{
+    background-color:rgb(243, 243, 243);
+    height: 1400px;
+}
+#site_total>h1{
+    /* margin: 30px 250px 30px 250px; */
+    margin: 0;
+    margin-left: 250px;
+}
+.board_up{
+    border: 0px solid red;
+    /* position: relative; */
+    float: left;
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 25%;
+}
+.board_h1{
+    border: 0px solid pink;
+    width: 21%;
+    float: left;
+    margin: 100px 100px 100px 100px;
+}
+.board_img{
+    border: 0px solid pink;
+    width: 26%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin: 20px 100px 20px 0px;
+}
+.bospan{
+    color: rgb(0, 101, 163);
+}
+.select_title{
+    border-top: 1px solid gray;
+    margin: 470px 0px 20px 0px;
+    padding: 30px 30px 30px 400px;
+}
+.titlebox{
+    font-size: 1.5em;
+    vertical-align: middle;
+    padding: 1em;
+}
+#select{
+    vertical-align: middle;
+    margin: 0;
+    height: 35px;
+    padding: 3px;
+}
+.search{
+    width: 50%;
+    height: 30px;
+    vertical-align: middle;
+}
+.searchbtn{
+    margin: 10px 10px 0px 10px;
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: #131A37;
+}
+.board_cnt{
+    border: 0px solid black;
+    margin: 10px 250px;
+    width: 73%;
+}
+.boardtable{
+    margin: 30px 30px 30px 250px;
+    border-collapse: collapse;
+    border-left: hidden;
+    border-right: hidden;
+    width: 73%;
+    /* height: auto; */
+}
+.page{
+    text-align: center;
+}
+.boardtable tr th{
+    width: 10%;
+    background-color: #131A37;
+    color: white;
+}
+.boardtable tr th:nth-child(2){
+    width: 60%;
+    background-color: #131A37;
+    color: white;
+}
+.no, .author, .date, .view{
+    text-align: center;
+}
+.no{
+    font-weight: bold ;
+}
+.title{
+    padding-left: 2em;
+}
+.board_tbody tr{
+    height: 50px;
+}
+.pagination {
+    display: inline-block;
+    margin-left: 42%;   
+  }
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border-radius: 50%;
+}
+.pagination a.active {
+    background-color: #131A37;
+    color: white;
+}
+.pagination a:hover:not(.active) {
+    background-color: #131A37;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+/*
+.prevbtn{
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: 1px;
+    width: 1px;
+    height: 1px;
+} */

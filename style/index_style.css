@@ -66,3 +66,170 @@ body {
     text-align: center;
 }
 /* gnb패널 끝 */
+/* footer 시작 */
+footer{
+    background: #0f121c;
+    border-top: 1px solid lightgray;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.footer_contents {/*footer 중앙*/
+    /* border: 1px solid white; */
+    color: white;
+    height: 215px;
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    margin: 0px 280px;
+    margin-top: 10px;
+    padding: 0;
+    /* float: left; */
+}
+.footer_nav { /*약관 및 SNS*/
+    /* border: 1px solid white; */
+    float: left;
+    display: block;
+    margin: 10px;
+    padding: 0;
+    height: 180px;
+    width: 47%;
+}
+.footer_menu{
+    /* border: 1px solid white; */
+    list-style: none;
+    margin: 0;
+    padding-left: 25px;
+    height: 70px;
+}
+
+.footer_menu>li {
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin: 30px;
+    font-size: 1.1em;
+}
+.footer_menu>li>a {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
+.footer_sns {
+    /* border: 1px solid white; */
+    list-style: none;
+    margin: 35px 70px 50px 10px;
+    height: 30%;
+}
+.footer_sns>li {
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    
+}
+.footer_sns>li img{ /*SNS 이미지*/
+    /* border: 1px solid blue; */
+    display: inline;
+    margin-top: 0;
+    width: 30px;
+    height: 30px;
+
+}
+.footer_info { /*로고 및 주소*/
+    float: left;
+    display: block;
+    /* border: 1px solid white; */
+    margin: 10px;
+    padding: 0;
+    margin-left: 220px;
+    /* padding-left: 30px; */
+    height: 180px;
+    width: 25%;
+    color: #676c80;
+}
+.footer_adress {    
+    /* border: 1px solid white; */
+    font-size: .5em;
+}
+.footer_adress>span {
+    color: darkgrey;
+}
+/* footer 끝 */
+/* 퀵메뉴 시작 */
+#quick_buy {
+    background-color: c8c8c8;
+    position: fixed;
+    width: 70px;
+    display: inline-block;
+    color: black;
+    height: 30px;
+    right: 53px;
+    top: 63%;
+    z-index: 50;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    font-weight: bold;
+}
+
+#quick_bullet {
+    background-color: c8c8c8;
+    position: fixed;
+    width: 70px;
+    display: inline-block;
+    color: black;
+    height: 23px;
+    right: 54px;
+    top: 66%;
+    z-index: 50;
+    text-align: center;
+    border-bottom: 1px dotted black;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#quick_sell {
+    background-color: #c8c8c880;
+    border-bottom: 1px dotted black;
+    position: fixed;
+    width: 78px;
+    display: inline-block;
+    color: black;
+    height: 34px;
+    right: 49px;
+    top: 68.6%;
+    z-index: 50;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#quick_base {
+    width: 80px;
+    height: 160px;
+    position:fixed;
+    display: inline-block;
+    right:38px;
+    top: 50%;
+    z-index: 50;
+}
+
+/* 퀵메뉴 종료 */
+
+/* 탑메뉴로 돌아가기 시작*/
+#ToTheTop {
+    margin: 0;
+    padding: 0px;
+    width: 54px;
+    height: 54px;
+    position:fixed;
+    display: inline-block;
+    right:60px;
+    top: 57%;
+    z-index: 51;    
+}
+/*탑메뉴로 돌아가기 끝*/
