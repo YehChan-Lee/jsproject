@@ -42,24 +42,26 @@
             <!--신용 딜러 부분 끝-->
         </header>
         <!-- 딜러 section 시작 -->
-        <section class="dealer_section">
-            <div class="all_dealer">
-                <div class="main_dealer"><!-- Main Dealer 시작 -->
-                    <h2><span>이달의 딜러</span>
-                        <img src="images/crown.png" alt="" class="dealer_crown"></h2>
-                    <ul class="main_dealer_picture"><!-- Main Dealer Picture 시작-->
+        <section id="dealer_section">
+            <div id="all_dealer">
+                <div id="main_dealer">
+                    <!-- Main Dealer 시작 -->
+                    <h1>이달의 딜러
+                        <img src="images/crown.png" alt=""></h1>
+                    <ul id="main_dealer_picture">
+                        <!-- Main Dealer Picture 시작-->
                         <li>
                             <img src="images/김지원.jpg" alt="" max-width="100%">
                         </li>
                         <li>
-                            이름: 박정석<br>
-                            평점: 0/5<br>
-                            경력: 00년<br>
-                            최근거래: PORCHE 911 SPIDER<br>
-                            선정이유: #착한가격 #친절 #구매자<br>
+                            이&emsp;&emsp;름 | 박정석<br>
+                            평&emsp;&emsp;점 | 0/5<br>
+                            경&emsp;&emsp;력 | 00년<br>
+                            최근거래 | PORCHE 911 SPIDER<br>
+                            선정이유 | #착한가격 #친절 #구매자<br>
                             #판매자 #모두만족 #의사소통 #거래실적多
                         </li>
-                        <li class="dealer_word"><span>딜러의 한마디</span><br>
+                        <li id="dealer_word"><span>딜러의 한마디</span><br>
                             <p>
                                 죠 : 죠스바<br>
                                 스 : 스윽 꺼내보니<br>
@@ -68,46 +70,48 @@
                         </li>
                     </ul><!-- Main Dealer Pricture 종료-->
                 </div><!-- Main Dealer 종료 -->
-    
-                <div class="sub_dealer"><!-- Sub Dealer 시작-->
-                    <ul class="sub_list"><!-- sub_list 시작-->
+                <div id="sub_dealer">
+                    <!-- Sub Dealer 시작-->
+                    <ul id="sub_list">
+                        <!-- sub_list 시작-->
                         <li>
-                            <img src="images/조이현.jpg" alt="" class="sub_d1"
-                            onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
-                            <p>이름: 안승우<br>
-                            평점: 0/5</p>
+                            <img src="images/조이현.jpg" alt=""><a href="http://www.naver.com">
+                            <h3>이름 | 안승우</h3>
+                            <p>평점 0/5</p>
+                            </a>
                         </li>
                         <li>
-                            <img src="images/아이유.jpg" alt="" class="sub_d2"
-                            onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
-                            <p>이름: 전재승<br>
-                            평점: 0/5</p>
+                            <img src="images/아이유.jpg" alt=""><a href="http://www.naver.com">
+                            <h3>이름 | 전재승</h3>
+                            <p>평점 0/5</p>
+                            </a>
                         </li>
                         <li>
-                            <img src="images/아이유2.jpg" alt="" class="sub_d3"
-                            onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
-                            <p>이름: 최희만<br>
-                            평점: 0/5</p>
+                            <img src="images/아이유2.jpg" alt=""><a href="http://www.naver.com">
+                            <h3>이름 | 최희만</h3>
+                            <p>평점 0/5</p>
+                            </a>
                         </li>
                         <li>
-                            <img src="images/아이유.jpg" alt="" class="sub_d4"
-                            onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
-                            <p>이름: 이준영<br>
-                            평점: 0/5</p>
+                            <img src="images/아이유.jpg" alt=""><a href="http://www.naver.com">
+                            <h3>이름 | 이준영</h3>
+                            <p>평점 0/5</p>
+                            </a>
                         </li>
                         <li>
-                            <img src="images/아이유.jpg" alt="" class="sub_d5"
-                            onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer">
-                            <p>이름: 이예찬<br>
-                            평점: 0/5</p>
+                            <img src="images/아이유.jpg" alt=""><a href="http://www.naver.com">
+                            <h3>이름 | 이예찬</h3>
+                            <p>평점 0/5</p>
+                            </a>
                         </li>
                     </ul><!-- sub_list 종료-->
                 </div><!-- Sub Dealer 종료-->
-            </div><!--all_dealer 종료-->
-                <div class="more_dealer" onclick="javascript:location.href='http://www.naver.com'" style="cursor:pointer"><!-- 더보기 시작-->
-                        <span>딜러 더보기</span>
-                        <img src="images/arrow2.png" alt="" class="more_Dbtn">
-                </div><!-- 더보기 종료-->
+            </div>
+            <!--all_dealer 종료-->
+            <!-- 딜러 더보기 시작-->
+            <div id="more_dealer"><a href="http://www.naver.com">
+                <h3>딜러 더보기 ></h3>
+            </a></div><!-- 딜러 더보기 종료-->
         </section>
         <!-- 딜러 section 끝 -->
         <!-- 인기 차량 시작 -->
@@ -148,77 +152,77 @@
         </section>
         <!-- 인기 차량 끝 -->
         <!-- 기사 시작 -->
-        <section class="news_section">
-            <div class="news_Alldiv"><!--기사 div -->
-                <h2>
+        <section id="news_section">
+            <div id="news_Alldiv">
+                <!--기사 div -->
+                <h1>
                     <span>언론에서 만나는 첫차</span>
-                    <img src="images/newspaper.png" alt="news" class="news_img">
-                </h2>
-                <ul class="news_ul">
+                    <img src="images/newspaper.png" alt="news" id="news_img">
+                </h1>
+                <ul id="news_ul">
                     <li>
                         <a href="https://www.yna.co.kr/view/AKR20200710045900003?input=1195m" target="_blank">
                             <dl>
-                                <dt class="news_list">
-                                    <span class="news_name">연합뉴스</span>
-                                    <span class="news_date">2020.07.10</span>
+                                <dt id="news_list">
+                                    <span id="news_name">연합뉴스</span>
+                                    <span id="news_date">2020.07.10</span>
                                 </dt>
-                                <dd class="news_photo">
+                                <dd id="news_photo">
                                     <img src="./images/독일.jpg" alt="">
                                 </dd>
-                                <dd class="news_des">독일 자동차잡지 "현대차 넥쏘 매우 우수한 차"</dd>
+                                <dd id="news_des">독일 자동차잡지 "현대차 넥쏘 매우 우수한 차"</dd>
                             </dl>
                         </a>
                     </li>
                     <li>
                         <a href="http://news.kmib.co.kr/article/view.asp?arcid=0014788726&code=61141111&cp=nv" target="_blank">
                             <dl>
-                                <dt class="news_list">
-                                    <span class="news_name">국민일보</span>
-                                    <span class="news_date">2020.07.10</span>
+                                <dt id="news_list">
+                                    <span id="news_name">국민일보</span>
+                                    <span id="news_date">2020.07.10</span>
                                 </dt>
-                                <dd class="news_photo">
+                                <dd id="news_photo">
                                     <img src="./images/중고차_코로나.jpg" alt="">
                                 </dd>
-                                <dd class="news_des">집에서 중고차 사고 명품 선물하고...코로나가 바꾼 일상</dd>
+                                <dd id="news_des">집에서 중고차 사고 명품 선물하고...코로나가 바꾼 일상</dd>
                             </dl>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.kyongbuk.co.kr/news/articleView.html?idxno=2046018" target="_blank">
                             <dl>
-                                <dt class="news_list">
-                                    <span class="news_name">경북대구</span>
-                                    <span class="news_date">2020.07.09</span>
+                                <dt id="news_list">
+                                    <span id="news_name">경북대구</span>
+                                    <span id="news_date">2020.07.09</span>
                                 </dt>
-                                <dd class="news_photo">
+                                <dd id="news_photo">
                                     <img src="./images/안동.jpg" alt="">
                                 </dd>
-                                <dd class="news_des">안동시, 노후경유차 조기폐차·LPG 신차구입 지원</dd>
+                                <dd id="news_des">안동시, 노후경유차 조기폐차·LPG 신차구입 지원</dd>
                             </dl>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.fnnews.com/news/202007112021465167" target="_blank">
                             <dl>
-                                <dt class="news_list">
-                                    <span class="news_name">파이낸셜뉴스</span>
-                                    <span class="news_date">2020.07.11</span>
+                                <dt id="news_list">
+                                    <span id="news_name">파이낸셜뉴스</span>
+                                    <span id="news_date">2020.07.11</span>
                                 </dt>
-                                <dd class="news_photo">
+                                <dd id="news_photo">
                                     <img src="./images/중고차_키워드.jpg" alt="">
                                 </dd>
-                                <dd class="news_des">"올해 상반기 중고차 시장 키워드는 H.O.M.E"</dd>
+                                <dd id="news_des">"올해 상반기 중고차 시장 키워드는 H.O.M.E"</dd>
                             </dl>
                         </a>
                     </li>
                 </ul>
-                <div class="news_more"><!-- 기사 더보기 -->
-                    <a href="http://www.naver.com" target="_blank">
-                    <span>기사 더보기</span>
-                    <img src="./images/arrow2.png" class="news_moreimg">
-                    </a>
-                </div> <!-- 기사 더보기 끝 -->
-            </div><!--기사 div 끝 -->
+                <!-- 기사 더보기 -->
+                <div id="news_more"><a href="http://www.naver.com" target="_blank">
+                        <h3>기사 더보기 ></h3>
+                    </a></div> <!-- 기사 더보기 끝 -->
+            </div>
+            <!--기사 div 끝 -->
         </section><!-- 기사 끝 -->
 
     </div>
