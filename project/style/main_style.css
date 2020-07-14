@@ -135,75 +135,74 @@ img {
 }
 
 /* 메인딜러 시작 */
-.all_dealer{
+#all_dealer{
     position: relative;
     border: 0px solid orange;
 }
-.dealer_section{
-    background-color: #303030;
-    height: 930px;
+#dealer_section{
+    background-color:rgb(243, 243, 243);
+    height: 770px;
 }
-.main_dealer > h2 {
-    text-align: left;
-    font-size: 2em;
-    color: white;
-    padding-left: 23%;
-    /* margin-left: 10% */
-}
-.main_dealer {
+#main_dealer {
     border: 0px solid blue;
     width: 100%;
     display: inline-block;
     position: relative;
 }
-.main_dealer_picture{
+#main_dealer>h1 {
+    text-align: center;
+    color: black;
+    margin: 50px 0px;
+    font-size: 40px;
+    padding-left: 50px;
+}
+#main_dealer>h1>img{
+    width: 40px;
+    height: 50px;
+    margin: 0;
+}
+#main_dealer_picture{
     border: 0px solid yellow;
     height: auto;
-    width: 50%;
-    margin-left: 23%;
+    width: 35%;
+    margin-left: 35%;
     overflow: hidden;
-    background-color: #303030;
+    /* background-color: #303030; */
     padding: 0;
 }
-.main_dealer_picture>li {
+#main_dealer_picture>li {
     border: 0px solid red;
     list-style: none;
     position: relative;
-    max-width: 100%;
     float: left;
-    /* float: inline-end; */
-    /* padding: 0; */
-    margin: 1em;
-    color: white;
-    /* padding: 1em; */
+    margin: 15px 0px 0px 30px;
+    /* color: white; */
     text-align: left;
-    /* margin-right: 10%; */
     font-size: 1em;
+    padding: 0;
 }
-.main_dealer_picture>li>img {
-    height: 300px;
-    width: 280px;
+#main_dealer_picture>li>img {
+    height: 250px;
+    width: auto;
     margin: 0;
 }
-.sub_dealer {
+#sub_dealer {
     border: 0px solid green;
     display: inline-block;
     position: relative;
     width: 100%;
-    /* top: 50px; */
 }
-.sub_list>li {
+#sub_list li {
     border: 0px solid purple;
     list-style: none;
     float: left;
     width: 10%;
-    height: 10%;
+    height: 5%;
     margin-left: 4%;
     font-size: .7em;
+    color: black;
 }
-.more_dealer {
-    border: 3px solid antiquewhite;
-    font-size: 1.6em;
+#more_dealer {
     text-align: center;
     width: 180px;
     height: 30px;
@@ -213,52 +212,48 @@ img {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-.dealer_crown{
-    width: 40px;
-    height: 50px;
-    margin: 0;
-}
-.sub_list{
+#sub_list{
     display: block;
     list-style-type: disc;
-    /* margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px; */
-    /* padding-inline-start: 100px; */
-    margin-left: 17%;
-    color: white;
+    margin-left: 23%;
     text-align: center;
 }
-.sub_list>li>img{
+#sub_list li{
+    margin-left: 3%;
+}
+#sub_list>li>a>h3,p{
+    color: black;
+}
+#sub_list>li>img{
     border-radius: 50%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
+    margin: 0;
+    width: 70%;
+    /* max-width: 80%; */
     height: auto;
 }
-.dealer_word > p{
+#dealer_word > p{
     border: 0px solid red;
     width: 300px;
+    padding: 0;
 }
-.more_dealer>img {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 5px;
-    margin: 0;
+#more_dealer{
+    width: 240px;
+    margin: 10px 818px;
 }
-.more_dealer>span{
-    position:relative;
-    color: white;
-    font-size: .9em;
+#more_dealer > a> h3{
+    display: inline-block;
+    text-align: center;
+    width: 230px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    padding-top: 15px;
+    margin-bottom: 60px;
 }
-.dealer_word > span {
-    font-weight: bold;
-    font-size: 1.2em;
-    border-bottom: 0px solid red;
+#more_dealer > a{
+    text-decoration: none;
+    color: black;
 }
 /* 메인딜러 끝 */
 /* 인기차량 시작 */
@@ -335,27 +330,26 @@ img {
     text-decoration: none;
     color: white;
 }
-
 /* 인기 차량 끝 */
 /* 메인 뉴스 시작 */
-.news_section{
+#news_section{
     border: 0px solid red;
     width: 100%;
+    height: 700px;
 }
-.news_Alldiv>h2{
+#news_Alldiv>h1{
     color: white;
     text-align: center;
+    margin: 50px 0px;
+    font-size: 40px;
+    margin: 60px 0px;
 }
-/* .news_Alldiv{
-    margin-top: 20px;
-    margin-bottom: 100px;
-} */
-.news_list{
+#news_list{
     font-size: .8em;
     margin: 0;
     padding-left: 5%;
 }
-.news_des{
+#news_des{
     margin: 0;
     padding-left: 5%;
     padding-top: 3%;
@@ -366,17 +360,17 @@ a{
     text-decoration:none;
     color: white;
 }
-.news_img{
+#news_img{
      width: 2%;
      height: 4%;
      margin: 0;
 }
-.news_ul{
+#news_ul{
     border: 0px solid blue;
     overflow: hidden;
-    padding-left: 15%;
+    padding-left: 16%;
 }
-.news_ul>li{
+#news_ul>li{
     border: 1px solid rgb(59, 59, 59);
     list-style: none;
     position: relative;
@@ -387,10 +381,10 @@ a{
     margin: .5%;
     /* box-shadow: .1px .1px .1px gray; */
 }
-.news_ul img{
+#news_ul img{
     margin: 0;
 }
-.news_photo >img{
+#news_photo >img{
     width: 25%;
     height: 40%;
     float: right;
@@ -399,24 +393,24 @@ a{
     margin-right: 6%;
     margin-left: 6%;
 }
-.news_more{
-    border: 1px solid white;
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    margin-left: 43%;
-    padding: .5em;
-        
+#news_more{
+    width: 240px;
+    margin: 30px 818px;
 }
-.news_moreimg{
-    width: 10%;
-    height: 10%;
-    vertical-align: middle;
-    margin: 0;
-    margin-top: -5px;
+#news_more > a> h3{
+    display: inline-block;
+    text-align: center;
+    width: 230px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    padding-top: 15px;
+    margin-bottom: 60px;
+}
+#news_more > a{
+    text-decoration: none;
+    color: white;
 }
 /* 메인 뉴스 끝 */
 /* 퀵메뉴 시작 */
