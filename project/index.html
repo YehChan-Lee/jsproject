@@ -67,8 +67,28 @@
     </div>
     <iframe src="main.html" id="main_iframe" onload="calcHeight();"
      name="main_iframe" title="main_iframe" frameborder="0" scrolling="no"
-      style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px;">
+      style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; max-height: 3500px;">
     </iframe>
+    <!--퀵메뉴 시작 -->
+        <aside class="quick_menu">
+
+            <div>
+                <img src="images/quick_base.png" alt="" id="quick_base">
+                <a href="#gnb_Panel">
+                    <img src="images/ToTheTop.png" alt="" id="ToTheTop">
+                </a>
+                <a href="index.html" target="_parent">
+                    <div id="quick_buy">메인 화면</div>
+                </a>
+                <a href="board.html" target="main_iframe">
+                    <div id="quick_bullet">게시판</div>
+                </a>
+                <a href="Sales.html" target="main_iframe">
+                    <div id="quick_sell"> 판 매 </div>
+                </a>
+            </div>
+
+        </aside>
 
     <footer><!--하단 footer 시작-->
         <div class="footer_contents"><!--하반 footer 전체-->
