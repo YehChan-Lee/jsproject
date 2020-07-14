@@ -13,9 +13,10 @@
     <p class="Ptext"><a href="index.html">1조 중고차</a></p>
     <form action="" class="Signupform">
         <h4>아이디</h4><span><input type="text"></span>
-        <h4>비밀번호</h4><span><input type="password" class="pwinput" id="pwd1"></span>
-        <h4>비밀번호 확인</h4><span><input type="password" class="pw2input" id="pwd2"></span>
-
+        <h4>비밀번호</h4><span><input type="password" class="pwinput" id="pwd1"><div id="passdiv"></div></span>
+        
+        <h4>비밀번호 확인</h4><span><input type="password" class="pw2input" id="pwd2"><div id="passdiv2"></div></span>
+        
         <h4>이름</h4><span><input type="text"></span>
         <h4>생년월일</h4>
         <span>
@@ -49,7 +50,7 @@
                 <option value="">여자</option>
             </select></span>
         <h4>주소</h4><span><input type="text"></span>
-        <h4>핸드폰번호</h4><span><input type="text"></span>
+        <h4>핸드폰번호</h4><span><input type="text" id="phoneinput"><div id="phonediv"></div></span>
         <button>가입하기</button>
         <div class="loginfooter">
             <ul>
@@ -66,6 +67,73 @@
             <span>All Right Reserved.</span>
         </address>
     </form>
+    <script>
+        $(function () {
+            $('#pwd2').blur(function () {
+                var pwd1 = $('#pwd1').val();
+                var pwd2 = $('#pwd2').val();
+                if (pwd1 != pwd2) {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금3.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv2').text('비밀번호가 일치하지 않습니다').css('display','block');
+                }
+                if (pwd1 == pwd2) {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금4.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv2').css('display','none');
+                }
+            })
+            $('#pwd1').blur(function () {
+                var pw = $("#pwd1").val();
+                var num = pw.search(/[0-9]/g);
+                var eng = pw.search(/[a-z]/ig);
+                var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+                if (pw.length < 8 || pw.length > 20) {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금5.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv').text('8자리이상 20자리이하로 입력해주세요').css('display','block');
+                    return false;
+                } else if (pw.search(/\s/) != -1) {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금5.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv').text('공백없이 입력해주세요').css('display','block');
+                    return false;
+                } else if ((num < 0 && eng < 0) || (eng < 0 && spe < 0) || (spe < 0 && num < 0)) {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금5.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv').text('영문,숫자, 특수문자 중 2가지 이상을 혼합하여 입력해주세요.').css('display','block');
+                    return false;
+                } else {
+                    $(this).css({
+                        'backgroundImage': 'url(images/잠금6.JPG)',
+                        'backgroundPosition': 98 + '%'
+                    })
+                    $('#passdiv').css('display','none');
+                }
+            })
+            $('#phoneinput').blur(function () {
+                var phoneinput = $('#phoneinput').val();
+                var phone = phoneinput.search(/^\d{3}-\d{4}-\d{4}$/);
+                if (phone == -1) {
+                    $('#phonediv').text('010-0000-0000 형식으로 입력해주세요').css('display','block');
+                }
+                if (phone == 0) {
+                    $('#phonediv').css('display','none');
+                }
+            })
+
+        })
+    </script>
 </body>
 
 </html>
