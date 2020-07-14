@@ -9,14 +9,23 @@
     <link rel="stylesheet" sype="text/css" href="style/purchase_style.css">
     <script>
         $(document).ready(function () {
+            var h = document.body.scrollHeight;
             $("b").click(function () {
                 if (this.click == 1) {
                     $(this).closest("ul").children("li").hide();
                     this.click = 0;
+                    var a=0;
+                    if(document.body.scrollHeight > h)
+                    a = 50;
+                    $('#main_iframe', parent.document).height(document.body.scrollHeight + a);
                 }
                 else {
                     $(this).closest("ul").children("li").show();
                     this.click = 1;
+                    var a=0;
+                    if(document.body.scrollHeight > h)
+                    a = 50;
+                    $('#main_iframe', parent.document).height(document.body.scrollHeight + a);
                 }
             });
         });
