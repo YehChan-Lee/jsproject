@@ -1,6 +1,6 @@
 html{
     width: 1800px;
-    background:rgb(243, 243, 243);
+    background:white
 }
 body {
     user-select: none;
@@ -20,14 +20,14 @@ hr{
     margin-top: 35px;
 }
 
-ul {
+#list ul {
     margin: 0;
     padding: 10px;
     border-bottom: 0.5px solid gray;
     width: 160px;
 }
 
-li {
+#list li {
     list-style: none;
     display: none;
 }
@@ -40,12 +40,12 @@ li {
     display: inline;
 }
 
-b {
+#list b {
     display: block;
     cursor: pointer;
     padding-bottom: 10px;
 }
-b:hover {
+#list b:hover {
     text-decoration: underline
 }
 iframe{

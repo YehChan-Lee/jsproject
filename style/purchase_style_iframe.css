@@ -2,14 +2,17 @@ div{
     text-align: center;
     width: 1250px;
 }
-div > ul{
+div a{
+    text-decoration: none; color: black;
+}
+div ul{
     display:inline-block;
 }
-div > ul > .carImg{
+div .carImg{
     list-style: none;
 }
 
-div > ul > li{
+div li{
     list-style: none;
 }
 li > img{

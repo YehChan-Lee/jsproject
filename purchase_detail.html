@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            user-select: none;
+        }
+        .carDetail {
+            text-align: center;
+        }
+
+        .carDetail li {
+            display: inline-block;
+        }
+
+        .carDetail h1{
+            margin-left: 213px;
+            color: navy;
+        }
+
+        .carDetail h2 {
+            color: rgb(255, 107, 107);
+            text-align: right;
+        }
+
+        .carDetail h3 {
+            color: gray;
+            text-align: right;
+        }
+
+        #deatilTable {
+            border-collapse: collapse;
+            border-top: 2px solid black;
+            position: relative;
+            top: 43px;
+            margin-left: 25px;
+            border-bottom: 2px solid black;
+            width: 377px;
+        }
+
+        #deatilTable td {
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+
+        .tableTag {
+            font-weight: bold;
+        }
+
+        .carDetail #mainImg {
+            margin-top: 40px;
+            margin-right: 20px;
+            width: 700px;
+            height: 500px;
+        }
+
+        #deatilSubImg{
+           position: relative;
+           top: 5px;
+        }
+
+        #deatilSubImg img {
+            margin-right: 5px;
+            width: 120px;
+            height: 93px;
+            border: 2px solid white;
+        }
+
+        #deatilSubImg img:hover{
+            border: 1px solid red;
+        }
+
+        #clickOn > img{
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            let img = document.getElementById("deatilSubImg").getElementsByTagName("img");
+            let thisPre = img[0];
+            for(let i=0;i<img.length;i++){
+                img[i].onclick = function(){
+                    thisPre.closest("td").id = "";
+                    this.closest("td").id = "clickOn";
+                    thisPre = this;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul class="carDetail">
+        <li>
+            <h1>아우디 A7 55 TDI 콰트로 스포츠</h1>
+            <h2>3521만원</h2>
+            <h3>27개월 / 월 37만원</h3>
+        </li>
+        <li>
+            <table id="deatilTable">
+                <tr>
+                    <td class="tableTag">연식</td>
+                    <td>18년 2월</td>
+                    <td class="tableTag">배기량</td>
+                    <td>2000cc</td>
+                </tr>
+                <tr>
+                    <td class="tableTag">주행거리</td>
+                    <td>8,400km</td>
+                    <td class="tableTag">차량번호</td>
+                    <td>서울 1234</td>
+                </tr>
+                <tr>
+                    <td class="tableTag">연료</td>
+                    <td>경유</td>
+                    <td class="tableTag">사고유무</td>
+                    <td>무사고</td>
+                </tr>
+                <tr>
+                    <td class="tableTag">변속기</td>
+                    <td>오토</td>
+                    <td class="tableTag">색상</td>
+                    <td>흰색</td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+    <ul class="carDetail">
+        <li><img id="mainImg" src="images/purchase/car1.jpg" alt=""></li>
+        <li>
+            <table id="deatilSubImg">
+                <tr>
+                    <td id="clickOn"><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                    <td><img src="images/purchase/car1.jpg" alt=""></td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+
+</body>
+
+</html>
