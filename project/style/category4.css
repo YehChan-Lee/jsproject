@@ -1,16 +1,24 @@
 body {
     background-color: rgb(243, 243, 243);
+    height: 1080px;   
 }
-.Ptext {
-    font-size: 50px;
-    width: 300px;
-    height: 70px;
-    position: relative;
-    margin-left: 850px;
+.pwinput {
+    background-image: url('/project/images/잠금.JPG');
+    background-position:98%; 
+    background-repeat:no-repeat;
+    border: 1px solid gray;
 }
-.Ptext > a {
-    text-decoration: none;
-    color: #131A37;
+.pw2input {
+    background-image: url('/project/images/잠금2.JPG');
+    background-position:100%; 
+    background-repeat:no-repeat;
+    border: 1px solid gray;
+}
+
+.loginform {
+    width: 800px;
+    height: 800px;
+    margin-left: 550px;
 }
 .Loginfield {
     position: relative;
@@ -18,7 +26,7 @@ body {
     height: 400px;
     border-radius: 4px;
     color: #131A37;
-    margin:715px;
+    margin:136px;
     margin-bottom: 50px;
     margin-top: 50px;
 }
@@ -29,7 +37,6 @@ body {
     margin-top: 20px;
     border-radius: 5px;
     border-style: solid;
-    
 }
 .Pwfield {
     width: 400px;
@@ -47,7 +54,7 @@ body {
     margin-top: 20px;
     background-color: #131A37;
     color: lightgray;
-    
+  
 }
 .SignupBtn {
     border-radius: 5px;
@@ -82,7 +89,7 @@ body {
     float: left;
     width: 460px;
     height: 190px;
-    margin: 0px 760px;
+    margin: 5px 175px;
     
 }
 /* 회원가입 시작 */
@@ -91,7 +98,7 @@ body {
     width: 300px;
     height: 70px;
     position: relative;
-    margin-left: 850px;
+    margin-left: 837px;
 }
 .Ptext>a {
     text-decoration: none;
@@ -100,7 +107,7 @@ body {
 .Signupform {
     width: 800px;
     height: 800px;
-    margin-left: 550px;
+    margin-left: 530px;
 }
 .Signupform>span {
     float: left;
@@ -120,6 +127,7 @@ body {
     height: 40px;
     margin-left: 50px;
     margin-top: 10px;
+    font-size: 15px;
 }
 .Signupform>button {
     width: 458px;
@@ -159,14 +167,94 @@ body {
     height: 44px;
     margin: 0;
     margin-left: 5px;
+    padding-left: 5px;
+    font-size: 15px;
 }
 .Signupform>span>.Signupgender {
     width: 460px;
     height: 45px;
     margin-left: 50px;
     margin-top: 10px;
+    font-size: 15px;
 }
 .Signupform>span>.divsignup {
     margin-left: 13px;
 }
+.loginfooter {
+    position: relative;
+    width: 800px;
+    height: 20px;
+    margin-left: 145px;
+    margin-top: 20px;
+    clear: both;
+}
+.loginfooter > ul > li {
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+}
+.loginfooter > ul > li > a {
+   font-size: 12px;
+   text-decoration: none;
+   color: #131A37; 
+}
+.loginfooterli {
+    border-left: 1px solid rgba(128, 128, 128, 0.466);
+    padding-left: 13px;
+}
+.loginaddress {
+    position: relative;
+    width: 300px;
+    height: 90px;
+    margin-left: 280px;
+    margin-top: 10px;
+}
+.loginaddress > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #131A37; 
+}
+.loginaddress > span {
+    font-size: 12px;
+    color: #131A37; 
+}
+.loginfooter2 {
+    position: relative;
+    width: 800px;
+    height: 20px;
+    margin-left: 110px;
+    margin-top: 20px;
+    clear: both;
+}
+.loginfooter2 > ul > li {
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+}
+.loginfooter2 > ul > li > a {
+   font-size: 12px;
+   text-decoration: none;
+   color: #131A37; 
+}
+.loginfooterli2 {
+    border-left: 1px solid rgba(128, 128, 128, 0.466);
+    padding-left: 13px;
+}
+.loginaddress2 {
+    position: relative;
+    width: 300px;
+    height: 90px;
+    margin-left: 240px;
+    margin-top: 10px;
+}
+.loginaddress2 > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #131A37; 
+}
+.loginaddress2 > span {
+    font-size: 12px;
+    color: #131A37; 
+}
+
 /* 회원가입 끝 */

@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" sype="text/css" href = "style/category4.css">
+    <link rel="stylesheet" sype="text/css" href="style/category4.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
     <p class="Ptext"><a href="index.html">1조 중고차</a></p>
     <form action="" class="Signupform">
         <h4>아이디</h4><span><input type="text"></span>
-        <h4>비밀번호</h4><span><input type="password"></span>
-        <h4>비밀번호 확인</h4><span><input type="password"></span>
+        <h4>비밀번호</h4><span><input type="password" class="pwinput" id="pwd1"></span>
+        <h4>비밀번호 확인</h4><span><input type="password" class="pw2input" id="pwd2"></span>
+
         <h4>이름</h4><span><input type="text"></span>
         <h4>생년월일</h4>
         <span>
             <div>
-                <input type="text" class="Signupbirth">
+                <input type="text" class="Signupbirth" placeholder="   년(4자)">
             </div>
             <div class="divselect">
                 <select name="" id="" class="Signupbirthselect">
@@ -38,7 +40,7 @@
                 </select>
             </div>
             <div class="divsignup">
-                <input type="text" class="Signupbirth2">
+                <input type="text" class="Signupbirth2" placeholder="   일">
             </div>
         </span>
         <h4>성별</h4><span>
@@ -49,6 +51,20 @@
         <h4>주소</h4><span><input type="text"></span>
         <h4>핸드폰번호</h4><span><input type="text"></span>
         <button>가입하기</button>
+        <div class="loginfooter">
+            <ul>
+                <li><a href="">이용약관</a></li>
+                <li class="loginfooterli"><a href="">개인정보처리방침</a></li>
+                <li class="loginfooterli"><a href="">책임의 한계와 법적고지</a></li>
+                <li class="loginfooterli"><a href="">회원정보 고객센터</a></li>
+            </ul>
+        </div>
+        <address class="loginaddress">
+            <a href="">1조 중고차</a>
+            <span>Copyright</span>
+            <span>comstudy21</span>
+            <span>All Right Reserved.</span>
+        </address>
     </form>
 </body>
 
