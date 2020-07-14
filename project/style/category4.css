@@ -100,6 +100,8 @@ body {
     height: 70px;
     position: relative;
     margin-left: 837px;
+    color: #131A37;
+    font-weight: bold;
 }
 .Ptext>a {
     text-decoration: none;
