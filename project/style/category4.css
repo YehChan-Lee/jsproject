@@ -258,5 +258,33 @@ body {
     font-size: 12px;
     color: #131A37; 
 }
+#passdiv2 {
+    display: none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: red;
+    width: 400px;
+
+}
+#passdiv {
+    display: none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: red;
+    width: 400px;
+}
+#phonediv {
+    display: none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: red;
+    width: 400px;
+}
 
 /* 회원가입 끝 */
