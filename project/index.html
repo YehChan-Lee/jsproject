@@ -45,7 +45,7 @@
     function calcHeight(){
         var ifr = document.getElementById('main_iframe');
         var ifrw = (ifr.contentWindow || ifr.contentDocument);
-        ifr.height = ifrw.document.body.scrollHeight;
+        $('#main_iframe').height(ifrw.document.body.scrollHeight);
      ifr.style.overflow = "hidden";
     }
     </script>
