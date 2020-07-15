@@ -38,39 +38,42 @@
                     });
                 }
             }
-            quickMenuScr();
-
-            $(window).resize(function(){
+            $(window).resize(function () {
                 resizeApply();
-                quickMenuScr();
-            });
+            });resizeApply();
         });
 
         function resizeApply() {
+            var indexContent = document.getElementById("indexContent");
+            var quick_menu = document.getElementById("quick_menu");
             var minWidth = 1920;
+            var minHeight = 937;
             zoom = window.innerWidth / minWidth;
+            zoomY = window.innerHeight / minHeight;
             width = 100 / zoom;
-            document.body.style.transformOrigin = "left top";
-            document.body.style.transform = "scale(" + zoom + ")";
-            document.body.style.width = width + "%";
-            document.body.addEventListener("transitionend", function(){
-            document.body.style.transform = '';
-            }, false);
-            console.log(window.innerHeight);
-            }
+            height = 70*zoomY;
+            indexContent.style.transformOrigin = "left top";
+            indexContent.style.transform = "scale(" + zoom + ")";
+            indexContent.style.width = width + "%";
+            quick_menu.style.top = height + "%";
+        }
+    </script>
 
-            function calcHeight() {
+    <script type="text/javascript">
+        function calcHeight() {
             var ifr = document.getElementById('main_iframe');
             var ifrw = (ifr.contentWindow || ifr.contentDocument);
             $('#main_iframe').height(ifrw.document.body.scrollHeight);
             ifr.style.overflow = "hidden";
         }
+    </script>
 
-        // 퀵메뉴 스크립트 시작
-        function quickMenuScr(){
-            $('#quick_buy').on('mouseover', function() {
+    <!-- 퀵메뉴 스크립트 시작 -->
+    <script>
+        $(document).ready(function () {
+            $('#quick_buy').on('mouseover', function () {
                 $('#quick_buy').css({
-                    'left':'-80px',
+                    'left': '-80px',
                     'width': '130px',
                     'height': '50px',
                     'border-radius': '50px',
@@ -78,9 +81,9 @@
                 })
                 $('#buyWord').html("구매");
             })
-            $('#quick_buy').on('mouseout', function(){
+            $('#quick_buy').on('mouseout', function () {
                 $('#quick_buy').css({
-                    'left':'0px',
+                    'left': '0px',
                     'width': '50px',
                     'height': '50px',
                     'padding-left': '0px',
@@ -88,9 +91,9 @@
                 })
                 $('#buyWord').html("");
             })
-            $('#quick_sell').on('mouseover', function() {
+            $('#quick_sell').on('mouseover', function () {
                 $('#quick_sell').css({
-                    'left':'-80px',
+                    'left': '-80px',
                     'width': '130px',
                     'height': '50px',
                     'padding-left': '5px',
@@ -98,9 +101,9 @@
                 })
                 $('#sellWord').html("판매");
             })
-            $('#quick_sell').on('mouseout', function(){
+            $('#quick_sell').on('mouseout', function () {
                 $('#quick_sell').css({
-                    'left':'0px',
+                    'left': '0px',
                     'width': '50px',
                     'height': '50px',
                     'padding-left': '0px',
@@ -108,9 +111,9 @@
                 })
                 $('#sellWord').html("");
             })
-            $('#quick_bullet').on('mouseover', function() {
+            $('#quick_bullet').on('mouseover', function () {
                 $('#quick_bullet').css({
-                    'left':'-80px',
+                    'left': '-80px',
                     'width': '130px',
                     'height': '50px',
                     'padding-left': '5px',
@@ -118,9 +121,9 @@
                 })
                 $('#bulletInWord').html("게시판");
             })
-            $('#quick_bullet').on('mouseout', function(){
+            $('#quick_bullet').on('mouseout', function () {
                 $('#quick_bullet').css({
-                    'left':'0px',
+                    'left': '0px',
                     'width': '50px',
                     'height': '50px',
                     'padding-left': '0px',
@@ -128,94 +131,104 @@
                 })
                 $('#bulletInWord').html("");
             })
-            }
-            // 퀵메뉴 스크립트 종료
-
+        });
     </script>
+    <!-- 퀵메뉴 스크립트 종료 -->
 </head>
 
 <body>
-    <div id="site_total">
-        <!--상단 gnb패널 시작-->
-        <div id="gnb_Panel">
-            <h2 id="logo"><a href="main.html" target="main_iframe">LOGO</a></h2>
-            <ul id="category">
-                <a href="purchase.html" target="main_iframe"><li id="category1" value="category1">자동차 구매</li></a>
-                <a href="Sales.html" target="main_iframe"><li id="category2" value="category2">자동차 판매</li></a>
-                <a href="board.html" target="main_iframe"><li id="category3" value="category3">게시판</li></a>
-                <a href="login.html" target="_self"><li id="category4" value="category4">로그인</li></a>
-            </ul>
-        </div>
-        <!--상단 gnb패널 끝-->
-    </div>
-    <iframe src="main.html" id="main_iframe" onload="calcHeight();" name="main_iframe" title="main_iframe"
-        frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
-    </iframe>
-        <!--퀵메뉴 시작 -->
-        <div id="quick_menu">
-    
-            <a href="purchase.html" target="main_iframe">
-                <div id="quick_buy">
-                    <img id="carIcon" src="images/carIcon.png" width="40" height="40">
-                    <span id="buyWord"></span>
-                </div>
-            </a>
-    
-            <a href="Sales.html" target="main_iframe">
-                <div id="quick_sell">
-                    <img id="sellIcon" src="images/shakeHands.png" alt="sell" width="40" height="40">
-                    <span id="sellWord"></span>
-                </div>
-            </a>
-    
-            <a href="board.html" target="main_iframe">
-                <div id="quick_bullet">
-                    <img id="bulletInIcon" src="images/bulletin.png" alt="bulletin" width="35" height="35">
-                    <span id="bulletInWord"></span>
-                </div>
-            </a>
-    
-            <a href="#gnb_Panel">
-                <img src="images/ToTheTop.png" alt="ToTheTop" id="ToTheTop">
-            </a>
-    
-        </div>
-        <!-- 퀵메뉴 종료 -->
+    <!--퀵메뉴 시작 -->
+    <div id="quick_menu">
 
-    <footer>
-        <!--하단 footer 시작-->
-        <div class="footer_contents">
-            <!--하반 footer 전체-->
-            <nav class="footer_nav">
-                <!--약관 및 SNS-->
-                <ul class="footer_menu">
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">개인정보취급방침</a></li>
-                    <li><a href="">제휴 문의</a></li>
+        <a href="purchase.html" target="main_iframe">
+            <div id="quick_buy">
+                <img id="carIcon" src="images/carIcon.png" width="40" height="40">
+                <span id="buyWord"></span>
+            </div>
+        </a>
+
+        <a href="Sales.html" target="main_iframe">
+            <div id="quick_sell">
+                <img id="sellIcon" src="images/shakeHands.png" alt="sell" width="40" height="40">
+                <span id="sellWord"></span>
+            </div>
+        </a>
+
+        <a href="board.html" target="main_iframe">
+            <div id="quick_bullet">
+                <img id="bulletInIcon" src="images/bulletin.png" alt="bulletin" width="35" height="35">
+                <span id="bulletInWord"></span>
+            </div>
+        </a>
+
+        <a href="#gnb_Panel">
+            <img src="images/ToTheTop.png" alt="ToTheTop" id="ToTheTop">
+        </a>
+
+    </div>
+    <!-- 퀵메뉴 종료 -->
+    <div id="indexContent">
+        <div id="site_total">
+            <!--상단 gnb패널 시작-->
+            <div id="gnb_Panel">
+                <h2 id="logo"><a href="main.html" target="main_iframe">LOGO</a></h2>
+                <ul id="category">
+                    <a href="purchase.html" target="main_iframe">
+                        <li id="category1" value="category1">자동차 구매</li>
+                    </a>
+                    <a href="Sales.html" target="main_iframe">
+                        <li id="category2" value="category2">자동차 판매</li>
+                    </a>
+                    <a href="board.html" target="main_iframe">
+                        <li id="category3" value="category3">게시판</li>
+                    </a>
+                    <a href="login.html" target="_self">
+                        <li id="category4" value="category4">로그인</li>
+                    </a>
                 </ul>
-                <ul class="footer_sns">
-                    <li><a href="https://www.instagram.com/?hl=ko"><img src="images/인스타.png" alt=""></a></li>
-                    <li><a href="https://ko-kr.facebook.com/"><img src="images/페이스북.png" alt=""></a></li>
-                    <li><a href="https://www.youtube.com/premium"><img src="images/유튜브.png" alt=""></a></li>
-                    <li><a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0"><img
-                                src="images/블로그.png" alt=""></a></li>
-                    <li><a href="https://www.kakaocorp.com/service/KakaoTalk?lang=ko"><img src="images/카카오톡.png"
-                                alt=""></a></li>
-                </ul>
-            </nav>
-            <div class="footer_info">
-                <!--로고 및 주소-->
-                <h3>로고</h3>
-                <p>Copyright © Team_1</p>
-                <div class="footer_adress">
-                    (주)1조 <span>|</span> 이예찬,안승우,전재승,최희만,이준영,서다슬,박정석<br>
-                    서울특별시 금천구 가산디지털단지 역<br>
-                    대표전화 010-1111-1111 <span>|</span> 사업자등록번호 111-11-11111<br>
-                    통신판매업신고번호 제 2020-서울금천-11111호
+            </div>
+            <!--상단 gnb패널 끝-->
+        </div>
+
+        <iframe src="main.html" id="main_iframe" onload="calcHeight();" name="main_iframe" title="main_iframe"
+            frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:visible; width:100%; min-height:500px; ">
+        </iframe>
+
+        <footer>
+            <!--하단 footer 시작-->
+            <div class="footer_contents">
+                <!--하반 footer 전체-->
+                <nav class="footer_nav">
+                    <!--약관 및 SNS-->
+                    <ul class="footer_menu">
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                        <li><a href="">제휴 문의</a></li>
+                    </ul>
+                    <ul class="footer_sns">
+                        <li><a href="https://www.instagram.com/?hl=ko"><img src="images/인스타.png" alt=""></a></li>
+                        <li><a href="https://ko-kr.facebook.com/"><img src="images/페이스북.png" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/premium"><img src="images/유튜브.png" alt=""></a></li>
+                        <li><a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0"><img
+                                    src="images/블로그.png" alt=""></a></li>
+                        <li><a href="https://www.kakaocorp.com/service/KakaoTalk?lang=ko"><img src="images/카카오톡.png"
+                                    alt=""></a></li>
+                    </ul>
+                </nav>
+                <div class="footer_info">
+                    <!--로고 및 주소-->
+                    <h3>로고</h3>
+                    <p>Copyright © Team_1</p>
+                    <div class="footer_adress">
+                        (주)1조 <span>|</span> 이예찬,안승우,전재승,최희만,이준영,서다슬,박정석<br>
+                        서울특별시 금천구 가산디지털단지 역<br>
+                        대표전화 010-1111-1111 <span>|</span> 사업자등록번호 111-11-11111<br>
+                        통신판매업신고번호 제 2020-서울금천-11111호
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
