@@ -39,12 +39,12 @@
                 }
             }
             // 페이지 사이즈에 따라 자동 크기 조절
+
             $(window).resize(function () {
                 resizeApply();
-            });resizeApply();
+            }); resizeApply();
             // 페이지 사이즈에 따라 자동 크기 조절 끝
         });
-
         // 페이지 사이즈에 따라 자동 크기 조절 함수
         function resizeApply() {
             var indexContent = document.getElementById("indexContent");
@@ -53,15 +53,16 @@
             var minHeight = 937;
             zoom = window.innerWidth / minWidth;
             zoomY = window.innerHeight / minHeight;
-            
             width = 100 / zoom;
-            height = 70*zoomY;
+            height = 70 * zoomY;
             indexContent.style.transformOrigin = "left top";
-            if(zoom>0.6){
-            indexContent.style.transform = "scale(" + zoom + ")";
+            if (zoom > 0.65) {
+                indexContent.style.transform = "scale(" + zoom + ")";
             }
-            else{
-                window.scrollTo(($(document).width()-window.innerWidth)/2,0);
+            else {
+                zoom = 0.65;
+                indexContent.style.transform = "scale(" + zoom + ")";
+                window.scrollTo(($(document).width() - window.innerWidth) / 2, 0);
             }
             indexContent.style.width = width + "%";
             quick_menu.style.top = height + "%";

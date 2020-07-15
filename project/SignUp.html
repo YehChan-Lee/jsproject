@@ -133,7 +133,6 @@
             })
 
         })
-
             // 페이지 사이즈에 따라 자동 크기 조절
             $(document).ready(function(){
             $(window).resize(function () {
@@ -144,10 +143,14 @@
         function resizeApply() {
             var minWidth = 1920;
             zoom = window.innerWidth / minWidth-1;
+            if(zoom>-0.47&&zoom<-0.1){
+                zoom += 0.1;
+            }
             document.body.style.top = zoom*100 +"%";
             document.body.style.left = zoom*100 +"%";
             window.scrollTo(window.innerWidth,0);
             window.scrollTo(window.scrollX/2,0);
+            console.log(zoom);
         }
         // 페이지 사이즈에 따라 자동 크기 조절 끝
         
