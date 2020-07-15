@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" sype="text/css" href = "style/category4.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
     <p class="Ptext"><a href="index.html">SELLCAR</a></p>
@@ -42,6 +43,25 @@
         <span>All Right Reserved.</span>
     </address>
 </form>
+
+<script>
+            // 페이지 사이즈에 따라 자동 크기 조절
+            $(document).ready(function(){
+            $(window).resize(function () {
+                resizeApply();
+            });resizeApply();
+        });
+
+        function resizeApply() {
+            var minWidth = 1920;
+            zoom = window.innerWidth / minWidth-1;
+            document.body.style.top = zoom*100 +"%";
+            document.body.style.left = zoom*100 +"%";
+            window.scrollTo(window.innerWidth,0);
+            window.scrollTo(window.scrollX/2,0);
+        }
+        // 페이지 사이즈에 따라 자동 크기 조절 끝
+</script>
     
 </body>
 
