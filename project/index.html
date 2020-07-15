@@ -56,11 +56,11 @@
             width = 100 / zoom;
             height = 70 * zoomY;
             indexContent.style.transformOrigin = "left top";
-            if (zoom > 0.65) {
+            if (zoom > 0.8) {
                 indexContent.style.transform = "scale(" + zoom + ")";
             }
             else {
-                zoom = 0.65;
+                zoom = 0.8;
                 indexContent.style.transform = "scale(" + zoom + ")";
                 window.scrollTo(($(document).width() - window.innerWidth) / 2, 0);
             }
